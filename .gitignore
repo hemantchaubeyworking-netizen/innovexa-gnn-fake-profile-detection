@@ -1,0 +1,42 @@
+# Environments & Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+backend/app/innovexa.db
+backend/app/*.db
+
+# Environment variables
+.env
+.env.production
+*.env
+
+# Large dataset raw files (per redistribution guidelines)
+# The local copy is documented in data/README.md
+data/*.csv
+data/raw/
+*.docx
+*.pptx
+*.pdf
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

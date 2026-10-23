@@ -1,0 +1,230 @@
+{
+  "feature_masking": {
+    "Random Forest": [
+      {
+        "mask_rate": 0.0,
+        "accuracy": 0.9867,
+        "f1_score": 0.9867,
+        "roc_auc": 0.9992
+      },
+      {
+        "mask_rate": 0.1,
+        "accuracy": 0.9707,
+        "f1_score": 0.9708,
+        "roc_auc": 0.9962
+      },
+      {
+        "mask_rate": 0.2,
+        "accuracy": 0.956,
+        "f1_score": 0.9564,
+        "roc_auc": 0.9931
+      },
+      {
+        "mask_rate": 0.3,
+        "accuracy": 0.94,
+        "f1_score": 0.9412,
+        "roc_auc": 0.989
+      },
+      {
+        "mask_rate": 0.5,
+        "accuracy": 0.9067,
+        "f1_score": 0.9059,
+        "roc_auc": 0.9628
+      }
+    ],
+    "MLP": [
+      {
+        "mask_rate": 0.0,
+        "accuracy": 0.9827,
+        "f1_score": 0.9827,
+        "roc_auc": 0.9987
+      },
+      {
+        "mask_rate": 0.1,
+        "accuracy": 0.96,
+        "f1_score": 0.9598,
+        "roc_auc": 0.9928
+      },
+      {
+        "mask_rate": 0.2,
+        "accuracy": 0.9347,
+        "f1_score": 0.9351,
+        "roc_auc": 0.9789
+      },
+      {
+        "mask_rate": 0.3,
+        "accuracy": 0.9,
+        "f1_score": 0.9017,
+        "roc_auc": 0.9709
+      },
+      {
+        "mask_rate": 0.5,
+        "accuracy": 0.8453,
+        "f1_score": 0.8415,
+        "roc_auc": 0.9162
+      }
+    ],
+    "GCN": [
+      {
+        "mask_rate": 0.0,
+        "accuracy": 0.976,
+        "f1_score": 0.976,
+        "roc_auc": 0.9967
+      },
+      {
+        "mask_rate": 0.1,
+        "accuracy": 0.9787,
+        "f1_score": 0.9787,
+        "roc_auc": 0.9969
+      },
+      {
+        "mask_rate": 0.2,
+        "accuracy": 0.9787,
+        "f1_score": 0.9786,
+        "roc_auc": 0.9967
+      },
+      {
+        "mask_rate": 0.3,
+        "accuracy": 0.98,
+        "f1_score": 0.9799,
+        "roc_auc": 0.9966
+      },
+      {
+        "mask_rate": 0.5,
+        "accuracy": 0.9773,
+        "f1_score": 0.9772,
+        "roc_auc": 0.9964
+      }
+    ],
+    "GraphSAGE": [
+      {
+        "mask_rate": 0.0,
+        "accuracy": 0.9747,
+        "f1_score": 0.9746,
+        "roc_auc": 0.9955
+      },
+      {
+        "mask_rate": 0.1,
+        "accuracy": 0.9773,
+        "f1_score": 0.9773,
+        "roc_auc": 0.9941
+      },
+      {
+        "mask_rate": 0.2,
+        "accuracy": 0.976,
+        "f1_score": 0.9759,
+        "roc_auc": 0.9941
+      },
+      {
+        "mask_rate": 0.3,
+        "accuracy": 0.9733,
+        "f1_score": 0.9733,
+        "roc_auc": 0.994
+      },
+      {
+        "mask_rate": 0.5,
+        "accuracy": 0.9733,
+        "f1_score": 0.9732,
+        "roc_auc": 0.994
+      }
+    ]
+  },
+  "edge_injection": {
+    "GCN": [
+      {
+        "injection_ratio": 0.0,
+        "accuracy": 0.976,
+        "f1_score": 0.976,
+        "roc_auc": 0.9967
+      },
+      {
+        "injection_ratio": 0.05,
+        "accuracy": 0.972,
+        "f1_score": 0.972,
+        "roc_auc": 0.9956
+      },
+      {
+        "injection_ratio": 0.1,
+        "accuracy": 0.9747,
+        "f1_score": 0.9746,
+        "roc_auc": 0.9957
+      },
+      {
+        "injection_ratio": 0.2,
+        "accuracy": 0.9467,
+        "f1_score": 0.9469,
+        "roc_auc": 0.9902
+      },
+      {
+        "injection_ratio": 0.3,
+        "accuracy": 0.952,
+        "f1_score": 0.9525,
+        "roc_auc": 0.9889
+      }
+    ],
+    "GraphSAGE": [
+      {
+        "injection_ratio": 0.0,
+        "accuracy": 0.9747,
+        "f1_score": 0.9746,
+        "roc_auc": 0.9955
+      },
+      {
+        "injection_ratio": 0.05,
+        "accuracy": 0.972,
+        "f1_score": 0.9721,
+        "roc_auc": 0.9959
+      },
+      {
+        "injection_ratio": 0.1,
+        "accuracy": 0.968,
+        "f1_score": 0.9681,
+        "roc_auc": 0.9938
+      },
+      {
+        "injection_ratio": 0.2,
+        "accuracy": 0.9547,
+        "f1_score": 0.9555,
+        "roc_auc": 0.9892
+      },
+      {
+        "injection_ratio": 0.3,
+        "accuracy": 0.9587,
+        "f1_score": 0.9593,
+        "roc_auc": 0.9891
+      }
+    ],
+    "GAT": [
+      {
+        "injection_ratio": 0.0,
+        "accuracy": 0.9707,
+        "f1_score": 0.97,
+        "roc_auc": 0.9943
+      },
+      {
+        "injection_ratio": 0.05,
+        "accuracy": 0.9507,
+        "f1_score": 0.951,
+        "roc_auc": 0.9887
+      },
+      {
+        "injection_ratio": 0.1,
+        "accuracy": 0.9053,
+        "f1_score": 0.9107,
+        "roc_auc": 0.9859
+      },
+      {
+        "injection_ratio": 0.2,
+        "accuracy": 0.7853,
+        "f1_score": 0.8193,
+        "roc_auc": 0.968
+      },
+      {
+        "injection_ratio": 0.3,
+        "accuracy": 0.6973,
+        "f1_score": 0.7662,
+        "roc_auc": 0.9591
+      }
+    ]
+  }
+}
