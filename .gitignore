@@ -27,9 +27,7 @@ backend/app/*.db
 .env.production
 *.env
 
-# Large dataset raw files (per redistribution guidelines)
-# The local copy is documented in data/README.md
-data/*.csv
+# Large raw dataset dumps (the 5,000-row benchmark dataset.csv is tracked)
 data/raw/
 *.docx
 *.pptx

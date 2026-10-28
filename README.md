@@ -10,6 +10,30 @@
 
 ---
 
+## 🌟 Key Features
+
+- **Multi-Paradigm ML & GNN Architecture**: Implements and benchmarks traditional baselines (Logistic Regression, Support Vector Machines, Random Forest), deep learning (MLP), and Graph Neural Networks (GCN, GraphSAGE, GAT).
+- **Leakage-Free Preprocessing Pipeline**: Strict stratified train/val/test splits (70/15/15) with scalers and log-transforms fitted exclusively on training data, preventing data leakage.
+- **Topological & Inductive Inference**: Unsupervised $k$-NN feature-similarity graph ($k=5$, cosine distance) with dynamic neighbor linkage for out-of-sample real-time predictions.
+- **Adversarial Robustness Testing**: Evaluated against progressive attribute masking (10% to 50%) and noise/adversarial edge perturbations (5% to 30%).
+- **Interactive Cybersecurity Dashboard**: Responsive React 19 + Vite frontend featuring real-time detection, ROC/PR visualizers, interactive HTML5 network graph visualizer, and SQLite detection history.
+- **Production-Ready REST API**: Fully asynchronous FastAPI backend with automated validation, OpenAPI documentation, and modular microservice structure.
+
+---
+
+## 🛠️ Technology Stack
+
+| Domain | Technologies / Libraries | Purpose |
+|---|---|---|
+| **Deep Learning & GNNs** | PyTorch, PyTorch Geometric principles, NumPy, SciPy | Neural message passing, graph convolutions, and tensor operations |
+| **Traditional ML** | Scikit-Learn, Joblib | Baselines (RF, SVM, LR), preprocessors, and cross-validation |
+| **Backend REST API** | FastAPI, Uvicorn, Pydantic v2, Python 3.10+ | Asynchronous REST endpoints, schema validation, and health checks |
+| **Database & Storage** | SQLite, SQLAlchemy, JSON / CSV | Persistent inference auditing, metrics logging, and graph configs |
+| **Frontend UI** | React 19, Vite, Recharts, Lucide React, Modern CSS | Dark-cybersecurity operations console, charts, and interactive canvas |
+| **Testing & Quality** | Python `unittest`, Pytest, Oxlint | Unit testing, integration verification, and code quality audits |
+
+---
+
 ## Table of Contents
 
 - [1. Research Objective & System Architecture](#1-research-objective--system-architecture)
@@ -28,7 +52,8 @@
 - [11. API Reference](#11-api-reference)
 - [12. Running Tests](#12-running-tests)
 - [13. GitHub Repository Management](#13-github-repository-management)
-- [14. Ethical Disclosures & Scientific Limitations](#14-ethical-disclosures--scientific-limitations)
+- [14. Future Improvements & Engineering Roadmap](#14-future-improvements--engineering-roadmap)
+- [15. Ethical Disclosures & Scientific Limitations](#15-ethical-disclosures--scientific-limitations)
 
 ---
 
@@ -266,7 +291,7 @@ INNOVEXA/
 │
 ├── data/
 │   ├── README.md                    # Dataset description and ethical licensing notes
-│   └── dataset.csv                  # Working copy of the 5,000-row dataset (gitignored)
+│   └── dataset.csv                  # 5,000-row balanced Instagram profile benchmark dataset
 │
 ├── results/
 │   ├── metrics.json                 # Machine-readable test metrics for all 7 models
@@ -453,15 +478,25 @@ If you have created the repository on your GitHub account (`https://github.com/h
 ```powershell
 cd "e:\MINI PROJECT\INNOVEXA"
 git remote add origin https://github.com/hemantchaubeyworking-netizen/innovexa-gnn-fake-profile-detection.git
-git branch -M master
-git push -u origin master
+git branch -M main
+git push -u origin main
 ```
 
-*Note: All raw dataset CSV files and bulky cache directories are strictly excluded via `.gitignore` to maintain security and regulatory compliance.*
+*Note: The 5,000-row benchmark dataset is provided in `data/dataset.csv` for immediate local reproduction, while runtime SQLite databases, virtual environments, build artifacts, and bulky cache directories are strictly excluded via `.gitignore`.*
 
 ---
 
-## 14. Ethical Disclosures & Scientific Limitations
+## 14. Future Improvements & Engineering Roadmap
+
+- [ ] **Multi-Modal Feature Fusion**: Integrate vision models (e.g., CLIP or EfficientNet) to analyze profile picture visual authenticity, detect stock photos, and identify AI-generated avatars.
+- [ ] **Dynamic & Temporal Graph Learning**: Transition from static $k$-NN graphs to temporal interaction networks (e.g., Temporal Graph Networks, TGN) capturing burst follow patterns and coordinated bot campaign timings.
+- [ ] **Heterogeneous Graph Neural Networks (HGT / RGCN)**: Model multi-relational graphs incorporating user-to-post, user-to-hashtag, and comment interactions.
+- [ ] **Scalable Mini-Batch Sampling**: Implement neighbor sampling (e.g., GraphSAINT or Cluster-GCN) via PyTorch Geometric to scale beyond 100,000+ nodes without high GPU VRAM consumption.
+- [ ] **Explainable AI (XAI) Node Attributions**: Incorporate GNNExplainer and Integrated Gradients directly into the web UI to show analysts which neighboring nodes and specific features triggered the classification.
+
+---
+
+## 15. Ethical Disclosures & Scientific Limitations
 
 1. **Similarity Graph vs. Follower Topology:**  
    The graph is an unsupervised $k$NN feature-similarity graph. Relationships represent geometric proximity in attribute space, not social endorsement or explicit follow links.
